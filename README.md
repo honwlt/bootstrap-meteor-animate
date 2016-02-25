@@ -4,6 +4,7 @@ Animate.css for Bootstrap dropdown in [Meteor] (http://www.meteor.com)
 # Usage
 ####HTML
 ```html
+            <template name="temp">
               <div class="droptest" >
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
                   Dropdown Animate
@@ -16,6 +17,7 @@ Animate.css for Bootstrap dropdown in [Meteor] (http://www.meteor.com)
                   <a class="dropdown-item" href="#">Separated link</a>
                 </div>
               </div> 
+            </template>  
 ```
 
 ####Javascript
