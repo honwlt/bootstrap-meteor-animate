@@ -1,11 +1,11 @@
-/*
-Credit: Bootstrap DropDown Effects with Animate.css
-http://bootbites.com/tutorials/bootstrap-dropdown-effects-animatecss
+/* ========================================================================
+ * Tutorial specific Javascript
+ *
+ * ========================================================================
+ * Copyright 2015 Bootbites.com (unless otherwise stated)
+ * For license information see: http://bootbites.com/license
+ * ======================================================================== */
 
-*/
-
-
-var dropdownSelectors = $('.dropdown, .dropup');
 
 // Custom function to read dropdown data
 // =========================
@@ -61,28 +61,31 @@ function dropdownEffectEnd(data, callbackFunc) {
 
 // Bootstrap API hooks
 // =========================
-dropdownSelectors.on({
-  "show.bs.dropdown": function () {
-    // On show, start in effect
-    var dropdown = dropdownEffectData(this);
-    dropdownEffectStart(dropdown, dropdown.effectIn);
-  },
-  "shown.bs.dropdown": function () {
-    // On shown, remove in effect once complete
-    var dropdown = dropdownEffectData(this);
-    if (dropdown.effectIn && dropdown.effectOut) {
-      dropdownEffectEnd(dropdown, function() {});
-    }
-  },
-  "hide.bs.dropdown":  function(e) {
-    // On hide, start out effect
-    var dropdown = dropdownEffectData(this);
-    if (dropdown.effectOut) {
-      e.preventDefault();
-      dropdownEffectStart(dropdown, dropdown.effectOut);
-      dropdownEffectEnd(dropdown, function() {
-        dropdown.dropdown.removeClass('open');
-      });
-    }
-  },
-});
+AssignDropDownAnimateTriggers = function (dropdownSelectors) {
+  dropdownSelectors.on({
+    "show.bs.dropdown": function () {
+      // On show, start in effect
+      console.log("show drop down trigged!!");
+      var dropdown = dropdownEffectData(this);
+      dropdownEffectStart(dropdown, dropdown.effectIn);
+    },
+    "shown.bs.dropdown": function () {
+      // On shown, remove in effect once complete
+      var dropdown = dropdownEffectData(this);
+      if (dropdown.effectIn && dropdown.effectOut) {
+        dropdownEffectEnd(dropdown, function() {});
+      }
+    },
+    "hide.bs.dropdown":  function(e) {
+      // On hide, start out effect
+      var dropdown = dropdownEffectData(this);
+      if (dropdown.effectOut) {
+        e.preventDefault();
+        dropdownEffectStart(dropdown, dropdown.effectOut);
+        dropdownEffectEnd(dropdown, function() {
+          dropdown.dropdown.removeClass('open');
+        });
+      }
+    },
+  });
+};
