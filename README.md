@@ -1,5 +1,5 @@
 # bootstrap-meteor-animate
-Bootstrap dropdown with [Animate.css] (https://github.com/daneden/animate.css) [Meteor] (http://www.meteor.com)
+Bootstrap dropdown with [Animate.css] (https://github.com/daneden/animate.css) in [Meteor] (http://www.meteor.com)
 
 # Usage
 ####HTML
