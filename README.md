@@ -1,5 +1,5 @@
 # bootstrap-meteor-animate
-Animate.css for Meteor
+Animate.css for Bootstrap dropdown in [Meteor] (http://www.meteor.com)
 
 # Usage
 ####HTML
